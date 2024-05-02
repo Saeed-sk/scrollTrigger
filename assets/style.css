@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.circle-clipPath{
+    background-image: url("/images/bg_first.png");
+    background-position: 80% 60%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+#firstVideo button{
+    opacity: 0;
+}
+
+.horizontal-scroll-content {
+    flex-direction: row; /* تغییر جهت افقی */
+    scroll-snap-type: x mandatory; /* فعال‌سازی اسکرول snap */
+}
+.horizontal-scroll-item {
+    flex: 0 0 auto;
+    width: 100vw; /* عرض کل صفحه */
+    scroll-snap-align: start; /* تنظیم snap align */
+}
+
+.imageHome3{
+    background-image: url("/images/home3.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.imageHome3Bg{
+    background-image: url("/images/home3Bg.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 80%;
+}
+.imageHome4{
+    background-image: url("/images/home4.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*body {*/
+/*    overflow: hidden;*/
+/*}*/

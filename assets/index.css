@@ -1,0 +1,15 @@
+.imageHome4Bg {
+
+    background-image: url("/images/home4Bg.png");
+    background-repeat: no-repeat;
+    background-position: 80% 90%;
+    background-size: 30%;
+}
+
+#scrollDiv {
+    scroll-behavior: smooth;
+}
+.content {
+    -webkit-clip-path: url(#clipPath);
+    clip-path: url(#clipPath); /* مسیر مخفی کننده اعمال شده */
+}
