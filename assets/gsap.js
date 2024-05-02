@@ -1,4 +1,5 @@
 let fistSlideAnimate = gsap.timeline();
+
 fistSlideAnimate.fromTo($('.circle-clipPath'), {
     clipPath: "circle(0.1% at 60% 60%)",
 }, {

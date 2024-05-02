@@ -7,12 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.circle-clipPath{
-    background-image: url("/images/bg_first.png");
-    background-position: 80% 60%;
-    background-size: 80%;
-    background-repeat: no-repeat;
-}
+
 #firstVideo button{
     opacity: 0;
 }

@@ -1,5 +1,7 @@
-.imageHome4Bg {
 
+
+
+.imageHome4Bg {
     background-image: url("/images/home4Bg.png");
     background-repeat: no-repeat;
     background-position: 80% 90%;
@@ -9,7 +11,124 @@
 #scrollDiv {
     scroll-behavior: smooth;
 }
+
 .content {
     -webkit-clip-path: url(#clipPath);
     clip-path: url(#clipPath); /* مسیر مخفی کننده اعمال شده */
 }
+
+
+body {
+    background: red;
+    margin: 0;
+}
+
+#overlay {
+    mix-blend-mode: multiply;
+    background-color: #1D3140;
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+#section1 {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.circle-clipPath{
+    background-image: url("/images/bg_first.png") !important;
+    background-position: 80% 60%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+#sectionPin {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.pin-wrap {
+    height: 100vh;
+}
+
+.pin-box {
+    height: 100%;
+    width: 100vw;
+}
+
+
+#section3 {
+    background: orange;
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#section4 {
+    background: grey;
+    padding: 10%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#box1 {
+    height: 100px;
+    width: 100px;
+    background: red;
+}
+
+#box2 {
+    height: 150px;
+    width: 150px;
+    background: blue;
+}
+
+#box3 {
+    height: 250px;
+    width: 250px;
+    background: green;
+    z-index: 1;
+}
+
+#box4 {
+    height: 200px;
+    width: 200px;
+    background: orange;
+}
+
+#box5 {
+    height: 200px;
+    width: 200px;
+    background: orange;
+}
+
+#box6 {
+    height: 200px;
+    width: 200px;
+    background: orange;
+}
+
+#box7 {
+    height: 200px;
+    width: 400px;
+    background: grey;
+}
+
+#box8 {
+    width: 50%;
+}
+
+#box9 {
+    width: 50%;
+    height: 300px;
+    background: purple;
+}
+
+
