@@ -562,20 +562,20 @@ video {
   position: relative;
 }
 
-.top-0 {
-  top: 0px;
-}
-
 .left-0 {
   left: 0px;
 }
 
-.z-0 {
-  z-index: 0;
+.top-0 {
+  top: 0px;
 }
 
 .-z-50 {
   z-index: -50;
+}
+
+.z-0 {
+  z-index: 0;
 }
 
 .mt-3 {
@@ -590,10 +590,6 @@ video {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .h-svh {
   height: 100svh;
 }
@@ -606,10 +602,6 @@ video {
   width: 100vw;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
-}
-
 .basis-1\/2 {
   flex-basis: 50%;
 }
@@ -620,16 +612,6 @@ video {
 
 .basis-2\/3 {
   flex-basis: 66.666667%;
-}
-
-.scale-x-125 {
-  --tw-scale-x: 1.25;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-x-150 {
-  --tw-scale-x: 1.5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-row-reverse {
@@ -684,10 +666,6 @@ video {
   overflow: clip;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
 .text-nowrap {
   text-wrap: nowrap;
 }
@@ -695,11 +673,6 @@ video {
 .bg-\[\#F2F7F7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(242 247 247 / var(--tw-bg-opacity));
-}
-
-.bg-red-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .p-20 {
@@ -819,9 +792,3 @@ video {
   background-position: center center;
   background-size: cover;
 }
-
-/*body {*/
-
-/*    overflow: hidden;*/
-
-/*}*/
