@@ -30,7 +30,6 @@ gsap.to(clipPaths, {
     width: 0,
 })
 locoScroll.on('scroll', (args) => {
-
     if (typeof args.currentElements['hey'] === 'object') {
         let progress = args.currentElements['hey'].progress;
         if (progress > 0.4) {
@@ -42,60 +41,25 @@ locoScroll.on('scroll', (args) => {
     }
 });
 
-console.log($(".parallax")[0])
-gsap.to($(".parallax")[0], {
-    // scrollTrigger: {
-    //     scroller: ".smooth-scroll",
-    //     trigger:'#pin-box',
-    //     // start:"100% 50%",
-    //     // end:"+=2000",
-    //     markers:true,
-    //     // toggleActions:"restart end reverse end",
-    // },
-    translateX: '+=10'
-})
-// GSAP PARALLAX - INDIVIDUAL ELEMENTS (while sharing class)
+let parallaxes = $('.parallax');
+let index = 1;
+for (let parallax of parallaxes) {
+    let percent = index * 210;
+    gsap.to(parallax, {
+        scrollTrigger: {
+            scroller: ".smooth-scroll",
+            scrub: true,
+            trigger: $(".pin-box"),
+            start: `${percent}% 100%`,
+            end: "+=150%",
+            markers: true,
+            toggleActions: "restart end reverse end",
+        },
+        translateX: "+=50"
+    })
+    index++;
+}
 
-let parallaxElements = Array.prototype.slice.call(document.querySelectorAll("section"));
-let self = this;
-// console.log(parallaxElements)
-// get box or parallax element inside each section
-// parallaxElements.forEach(function (self) {
-//
-//     let boxTop = self.querySelectorAll(".parallaxTop");
-//     let box = self.querySelectorAll(".parallax");
-//
-//     // animate boxes at top of page (section already in viewport)
-//     gsap.to(boxTop, {
-//         scrollTrigger: {
-//             scroller: ".smooth-scroll",
-//             scrub: true,
-//             trigger: self,
-//             start: "top 0%",
-//             end: "bottom 0%",
-//         },
-//         y: (i, target) => -innerHeight * target.dataset.speed,
-//         ease: "none"
-//     });
-//
-//     // animate boxes when the relevant section comes into viewport
-//     gsap.to(box, {
-//         scrollTrigger: {
-//             scroller: ".smooth-scroll",
-//             scrub: true,
-//             trigger: self,
-//             start: "top 100%",
-//             end: "bottom 0%",
-//         },
-//         y: (i, target) => -innerHeight * target.dataset.speed,
-//         ease: "none",
-//
-//     });
-//
-//
-// });
-
-////////////////////////////////////
 
 // get pinned boxes and box width
 let pinBoxes = $('.pin-box');
@@ -115,14 +79,49 @@ gsap.to(".pin-wrap", {
         scrub: true,
         trigger: "#sectionPin",
         pin: "#sectionPin",
-        // anticipatePin: 1,
         start: "top top",
-        end: pinWrapWidth
+        end: pinWrapWidth,
+        toggleActions: "restart end reverse end",
     },
     x: -horizontalScrollLength,
     ease: "none"
 });
-
+let pinBoxW = pinBoxes.width()
+gsap.from($(".boxLines>path"), {
+    scrollTrigger: {
+        trigger: "#sectionPin",
+        scroller: ".smooth-scroll",
+        start: (pinBoxW * 3) + pinBoxW / 1.8,
+        end: pinBoxW * 4,
+        scrub: true
+    },
+    strokeDashoffset: 1000
+})
+for (let textLine of $(".boxLines>path.textLine")) {
+    gsap.from(textLine, {
+        scrollTrigger: {
+            trigger: "#sectionPin",
+            scroller: ".smooth-scroll",
+            start: (pinBoxW * 3) + pinBoxW / 1.8,
+            end: pinBoxW * 4,
+            scrub: true
+        },
+        y: -100,
+        opacity: 0,
+    })
+}
+for (let circles of $(".boxLines>circle")) {
+    gsap.from(circles, {
+        scrollTrigger: {
+            trigger: "#sectionPin",
+            scroller: ".smooth-scroll",
+            start: (pinBoxW * 3) + pinBoxW / 2,
+            end: pinBoxW * 4,
+            scrub: true
+        },
+        scale: 0
+    })
+}
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());

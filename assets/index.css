@@ -1,6 +1,4 @@
 
-
-
 .imageHome4Bg {
     background-image: url("/images/home4Bg.png");
     background-repeat: no-repeat;
@@ -40,7 +38,8 @@ body {
     justify-content: space-around;
     position: relative;
 }
-.circle-clipPath{
+
+.circle-clipPath {
     background-image: url("/images/bg_first.png") !important;
     background-position: 80% 60%;
     background-size: 80%;
@@ -132,3 +131,7 @@ body {
 }
 
 
+.imageHome5Bg {
+    background: url("/images/bg_first.png") top 40% right no-repeat, url("/images/home5Bg.png") bottom 20%  left 10% no-repeat;
+    background-size: 70%, 10%;
+}
