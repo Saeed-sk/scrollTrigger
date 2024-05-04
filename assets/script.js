@@ -122,31 +122,37 @@ for (let circles of $(".boxLines>circle")) {
         scale: 0
     })
 }
-gsap.from($(".boxAnimate .iconSvg"), {
+
+let iconScale = gsap.timeline({
     scrollTrigger: {
         trigger: "#sectionPin",
         scroller: ".smooth-scroll",
         start: (pinBoxW * 3) + pinBoxW / 1.8,
-        end: pinBoxW * 4,
+        end: "+=180%",
         scrub: true,
-    },
-    scale:0
+    }
+})
+iconScale.from($(".boxAnimate .iconSvg"), {
+    scale: 0
+})
+iconScale.to($(".boxAnimate .iconSvg"), {
+    scale: "+=6",
+    translateX: (pinBoxW / 2) + "px",
+    translateY: -(pinBoxes.height()/4) + "px"
 })
 
-let animateLine = gsap.timeline({
-    scrollTrigger: {
-        trigger: "#sectionPin",
-        scroller: ".smooth-scroll",
-        start: (pinBoxW * 4),
-        end: pinBoxW * 5,
-        scrub: true,
-        onLeave:()=>{
-            locoScroll.on('scroll', (e)=>{
-                console.log(e)
-            })
-        }
-}})
-console.log($("#sectionPin"))
+// gsap.to($(".boxAnimate .iconSvg"), {
+//     scrollTrigger: {
+//         trigger: "#sectionPin",
+//         scroller: ".smooth-scroll",
+//         start: (pinBoxW * 4)+10,
+//         end: (pinBoxW * 5)+ pinBoxW / 1.8,
+//         scrub: true,
+//     },
+//     scale:"+=110% +=110%",
+//     translateX:"+=10"
+// })
+
 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
