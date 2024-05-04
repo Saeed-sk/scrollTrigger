@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/index.css">
     <link rel="stylesheet" href="../node_modules/locomotive-scroll/dist/locomotive-scroll.css">
     <title>صفحه اصلی</title>
-
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="h-svh">
 <div class="smooth-scroll bg-[#F2F7F7]">
@@ -132,88 +132,25 @@
                 </div>
             </div>
         </section>
-
-        <section dir="ltr" id="sectionPin">
-            <div class="pin-wrap flex">
-
-                <div class="pin-box">
-                    <div class="h-full w-[95vw] pt-48 pl-80">
-                       <div class="grid grid-cols-5 grid-rows-4 gap-4 place-content-start content-center max-w-[1363px]">
-                           <div class="col-span-2 row-span-1 relative flex items-center justify-center">
-                               <img class="object-cover w-full h-full " src="../images/slide21.png" alt="">
-                               <h3 class="absolute text-4xl font-thin text-white">for <strong class="font-bold">Sustainable</strong> future...</h3>
-                           </div>
-                           <div class="col-span-2 row-span-1 bg-[#2B7B86] flex justify-center items-center">
-                               <img class="" src="../images/sarodiEn.svg" alt="">
-                           </div>
-                           <div class="col-span-1 row-span-2">
-                               <img class="h-full" src="../images/slide23.png" alt="">
-                           </div>
-                           <div class="col-span-2 row-span-2">
-                               <img class="h-full w-full" src="../images/slide24.png" alt="">
-                           </div>
-                           <div class="col-span-1 row-span-1">
-                               <img class="h-full" src="../images/slide25.png" alt="">
-                           </div>
-                           <div class="col-span-1 row-span-1">
-                               <img class="object-cover" src="../images/slide27.png" alt="">
-                           </div>
-                           <div class="col-span-1 row-span-1">
-                               <img class="" src="../images/slide26.png" alt="">
-                           </div>
-                           <div class="col-span-2 row-span-1">
-                               <img class="h-full" src="../images/slide28.png" alt="">
-                           </div>
-
-                           <div class="col-span-full  text-2xl text-gray-300">
-                               <h5>by imenab</h5>
-                           </div>
-                       </div>
+        <section class="w-full h-svh imagesPin" dir="ltr" id="">
+            <div class="w-full h-full imagesWrap relative">
+                <div class="z-50 bottom-[10%] left-[10%] absolute bg-white flex flex-col w-[533px] h-[748px] p-6">
+                    <div class="basis-1/3 text-start text-[#5F5F5F] flex flex-col h-full w-full justify-end mb-6">
+                        <h5 class="text-[26px] font-thin">Sarodi Values:</h5>
+                        <h5 class="text-[32px] font-semibold">Creativity</h5>
+                        <h5 class="text-[32px] font-semibold">Environmentalist</h5>
+                        <h5 class="text-[32px] font-semibold">Improvement</h5>
+                    </div>
+                    <div class="relative w-full h-full overflow-clip">
+                        <img class="z-10 scale-125 absolute smallImage1 " src="../images/ImageSlider1.png" alt="">
+                        <img class="z-20 absolute smallImage2 clipping" src="../images/ImageSlider2.jpg" alt="">
+                        <img class="z-30 absolute smallImage3 clipping" src="../images/ImageSlider3.jpg" alt="">
                     </div>
                 </div>
-                <div class="pin-box">
-                    <div class="h-full w-[95vw] grid grid-cols-5 grid-rows-5 gap-5 place-content-center content-center p-32 pr-80">
-                        <div class="col-span-4 row-span-2 bg-[#BCDADB] text-[#1D636F] flex p-12">
-                            <h2 class="text-3xl basis-1/2 flex flex-col">
-                                Interacting
-                                <strong>Responsibility</strong>
-                            </h2>
-                            <p class="basis-1/2 text-2xl leading-8 font-thin">
-                                We are committed to the environment, and we share concerns for our planet. Sarodi
-                                Sanitary Ware is a brand that understands the importance of environmental
-                                sustainability. We design, produce and market all of our products in the most
-                                sustainable ways possible.
-                            </p>
-                        </div>
-                        <div class="col-span-1 row-span-2">
-                            <img class="object-cover w-full h-full" src="../images/slide11.png" alt="">
-                        </div>
-                        <div class="col-span-2 row-span-2 relative overflow-clip">
-                            <img class="w-full" src="../images/slide12.png" alt="">
-                            <h2 class="absolute left-[10%] top-[12%] text-3xl text-[#1D636F] font-bold">Sustainability</h2>
-                        </div>
-                        <div class="col-span-2 row-span-2 flex relative bg-[#268191]">
-                            <img class="w-full" src="../images/slide13.png" alt="">
-                            <h2 class="absolute text-3xl flex gap-2 items-end left-[10%] bottom-[10%] text-white font-bold">
-                                <img src="../images/slide131.png" alt="">
-                                <small class="font-thin">
-                                    Everything
-                                </small> You Need!
-                            </h2>
-                        </div>
-                        <div class="grid-cols-1 grid-rows-1 bg-[#2B7B86] flex items-center justify-center">
-                            <img src="../images/sarodifa.svg" alt="">
-                        </div>
-                        <div class="grid-cols-1 grid-rows-1 overflow-clip"><img class="w-full" src="../images/slide14.png" alt=""></div>
-                        <div class="col-span-full py-16 text-2xl text-gray-300">
-                            <h5>by imenab</h5>
-                        </div>
-                    </div>
-                </div>
-                <div data-scroll data-scroll-id="hey" id="pin-box" class="pin-box w-full relative">
-                    <svg class="absolute h-full w-full top-0 left-0">
+                <div class="absolute z-10 ">
+                    <svg class="absolute h-full w-full top-0 left-0 z-0">
                         <defs>
-                            <clipPath id="clipPath">
+                            <clipPath id="bgImageClipPath1">
                                 <rect x="0" y="0" width="5%" height="100%"/>
                                 <rect x="5%" y="0" width="5%" height="100%"/>
                                 <rect x="10%" y="0" width="5%" height="100%"/>
@@ -237,10 +174,102 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <div class="content w-full h-full">
-                        <video class="w-full h-full " id="firstVideo" muted controls>
+                    <img id="imageClip1" class="w-full" src="../images/bgImageSlider1.jpg" alt="">
+                </div>
+                <div class="absolute z-20 ">
+                    <svg class="absolute h-full w-full top-0 left-0 z-0">
+                        <defs>
+                            <clipPath id="bgImageClipPath2">
+                                <rect x="0" y="0" width="5%" height="100%"/>
+                                <rect x="5%" y="0" width="5%" height="100%"/>
+                                <rect x="10%" y="0" width="5%" height="100%"/>
+                                <rect x="15%" y="0" width="5%" height="100%"/>
+                                <rect x="20%" y="0" width="5%" height="100%"/>
+                                <rect x="25%" y="0" width="5%" height="100%"/>
+                                <rect x="30%" y="0" width="5%" height="100%"/>
+                                <rect x="35%" y="0" width="5%" height="100%"/>
+                                <rect x="40%" y="0" width="5%" height="100%"/>
+                                <rect x="45%" y="0" width="5%" height="100%"/>
+                                <rect x="50%" y="0" width="5%" height="100%"/>
+                                <rect x="55%" y="0" width="5%" height="100%"/>
+                                <rect x="60%" y="0" width="5%" height="100%"/>
+                                <rect x="65%" y="0" width="5%" height="100%"/>
+                                <rect x="70%" y="0" width="5%" height="100%"/>
+                                <rect x="75%" y="0" width="5%" height="100%"/>
+                                <rect x="80%" y="0" width="5%" height="100%"/>
+                                <rect x="85%" y="0" width="5%" height="100%"/>
+                                <rect x="90%" y="0" width="5%" height="100%"/>
+                                <rect x="95%" y="0" width="5%" height="100%"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <img id="imageClip2" class="w-full" src="../images/bgImageSlider2.jpg" alt="">
+                </div>
+                <div class="absolute z-30">
+                    <svg class="absolute h-full w-full top-0 left-0 z-0">
+                        <defs>
+                            <clipPath id="bgImageClipPath3">
+                                <rect x="0" y="0" width="5%" height="100%"/>
+                                <rect x="5%" y="0" width="5%" height="100%"/>
+                                <rect x="10%" y="0" width="5%" height="100%"/>
+                                <rect x="15%" y="0" width="5%" height="100%"/>
+                                <rect x="20%" y="0" width="5%" height="100%"/>
+                                <rect x="25%" y="0" width="5%" height="100%"/>
+                                <rect x="30%" y="0" width="5%" height="100%"/>
+                                <rect x="35%" y="0" width="5%" height="100%"/>
+                                <rect x="40%" y="0" width="5%" height="100%"/>
+                                <rect x="45%" y="0" width="5%" height="100%"/>
+                                <rect x="50%" y="0" width="5%" height="100%"/>
+                                <rect x="55%" y="0" width="5%" height="100%"/>
+                                <rect x="60%" y="0" width="5%" height="100%"/>
+                                <rect x="65%" y="0" width="5%" height="100%"/>
+                                <rect x="70%" y="0" width="5%" height="100%"/>
+                                <rect x="75%" y="0" width="5%" height="100%"/>
+                                <rect x="80%" y="0" width="5%" height="100%"/>
+                                <rect x="85%" y="0" width="5%" height="100%"/>
+                                <rect x="90%" y="0" width="5%" height="100%"/>
+                                <rect x="95%" y="0" width="5%" height="100%"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <img id="imageClip3" src="../images/bgImageSlider3.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section dir="ltr" id="sectionPin">
+            <div class="pin-wrap flex">
+
+                <div data-scroll data-scroll-id="hey" id="pin-box" class="pin-box">
+                    <div class="content w-full h-full relative">
+                        <video class="w-full h-full relative z-10 " id="firstVideo" muted controls>
                             <source src="../videos/secVideo.mp4" type="video/mp4">
                         </video>
+                        <svg class="absolute h-full w-full top-0 left-0 z-0">
+                            <defs>
+                                <clipPath id="clipPath">
+                                    <rect x="0" y="0" width="5%" height="100%"/>
+                                    <rect x="5%" y="0" width="5%" height="100%"/>
+                                    <rect x="10%" y="0" width="5%" height="100%"/>
+                                    <rect x="15%" y="0" width="5%" height="100%"/>
+                                    <rect x="20%" y="0" width="5%" height="100%"/>
+                                    <rect x="25%" y="0" width="5%" height="100%"/>
+                                    <rect x="30%" y="0" width="5%" height="100%"/>
+                                    <rect x="35%" y="0" width="5%" height="100%"/>
+                                    <rect x="40%" y="0" width="5%" height="100%"/>
+                                    <rect x="45%" y="0" width="5%" height="100%"/>
+                                    <rect x="50%" y="0" width="5%" height="100%"/>
+                                    <rect x="55%" y="0" width="5%" height="100%"/>
+                                    <rect x="60%" y="0" width="5%" height="100%"/>
+                                    <rect x="65%" y="0" width="5%" height="100%"/>
+                                    <rect x="70%" y="0" width="5%" height="100%"/>
+                                    <rect x="75%" y="0" width="5%" height="100%"/>
+                                    <rect x="80%" y="0" width="5%" height="100%"/>
+                                    <rect x="85%" y="0" width="5%" height="100%"/>
+                                    <rect x="90%" y="0" width="5%" height="100%"/>
+                                    <rect x="95%" y="0" width="5%" height="100%"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
                     </div>
                 </div>
                 <div class="pin-box imageHome3Bg">
@@ -363,8 +392,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="pin-box w-[100vw] boxAnimate relative">
-                    <div class="">
+                <div class="pin-box boxAnimate relative">
+                    <div class="w-[100vw]">
                         <div dir="rtl" class="horizontal-scroll-item h-screen flex imageHome5Bg">
                             <div class="basis-1/2 flex flex-col justify-center items-end h-full pl-20 pt-14 relative ">
                                 <svg class="boxLines h-2/3" stroke-dashoffset="0" stroke-dasharray="1000"
@@ -434,44 +463,88 @@
                 <div class="pin-box">
                     <div class="w-screen h-full"></div>
                 </div>
-
-
+                <div class="pin-box">
+                    <div class="h-full w-[95vw] flex flex-col p-48">
+                        <div class="grid grid-cols-5 grid-rows-3 gap-[20px] max-w-[1363px] max-h-[596px]">
+                            <div class="col-span-2 row-span-1 relative flex items-center justify-center animated">
+                                <img src="../images/slide21.png" alt="">
+                                <h3 class="absolute text-4xl font-thin text-white">for <strong class="font-bold">Sustainable</strong>
+                                    future...</h3>
+                            </div>
+                            <div class="col-span-2 row-span-1 bg-[#2B7B86] flex justify-center items-center animated">
+                                <img src="../images/sarodiEn.svg" alt="">
+                            </div>
+                            <div class="col-span-1 row-span-2">
+                                <img class="h-full w-full animated" src="../images/slide23.png " alt="">
+                            </div>
+                            <div class="col-span-2 row-span-2">
+                                <img class="h-full w-full animated" src="../images/slide24.png" alt="">
+                            </div>
+                            <div class="col-span-1 row-span-1">
+                                <img class="h-full w-full animated" src="../images/slide25.png" alt="">
+                            </div>
+                            <div class="col-span-1 row-span-1">
+                                <img class="h-full w-full animated" src="../images/slide27.png" alt="">
+                            </div>
+                            <div class="col-span-1 row-span-1">
+                                <img class="h-full w-full animated" src="../images/slide26.png" alt="">
+                            </div>
+                            <div class="col-span-2 row-span-1">
+                                <img class="h-full w-full animated" src="../images/slide28.png" alt="">
+                            </div>
+                        </div>
+                        <div class="self-start py-16 text-2xl text-gray-300">
+                            <h5 class="">by imenab</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="pin-box">
+                    <div class="h-full w-[95vw] flex flex-col p-48">
+                        <div class="grid grid-cols-5 grid-rows-4 gap-[20px] max-w-[1363px] max-h-[596px]">
+                            <div class="col-span-4 row-span-2 bg-[#BCDADB] text-[#1D636F] flex p-12">
+                                <h2 class="text-3xl basis-1/2 flex flex-col">
+                                    Interacting
+                                    <strong>Responsibility</strong>
+                                </h2>
+                                <p class="basis-1/2 text-2xl leading-8 font-thin">
+                                    We are committed to the environment, and we share concerns for our planet. Sarodi
+                                    Sanitary Ware is a brand that understands the importance of environmental
+                                    sustainability. We design, produce and market all of our products in the most
+                                    sustainable ways possible.
+                                </p>
+                            </div>
+                            <div class="col-span-1 row-span-2">
+                                <img class="object-cover w-full h-full" src="../images/slide11.png" alt="">
+                            </div>
+                            <div class="col-span-2 row-span-2 relative overflow-clip">
+                                <img class="w-full" src="../images/slide12.png" alt="">
+                                <h2 class="absolute left-[10%] top-[12%] text-3xl text-[#1D636F] font-bold">
+                                    Sustainability</h2>
+                            </div>
+                            <div class="col-span-2 row-span-2 flex relative bg-[#268191]">
+                                <img class="w-full" src="../images/slide13.png" alt="">
+                                <h2 class="absolute text-3xl flex gap-2 items-end left-[10%] bottom-[10%] text-white font-bold">
+                                    <img src="../images/slide131.png" alt="">
+                                    <small class="font-thin">
+                                        Everything
+                                    </small> You Need!
+                                </h2>
+                            </div>
+                            <div class="grid-cols-1 grid-rows-1 bg-[#2B7B86] flex items-center justify-center">
+                                <img src="../images/sarodifa.svg" alt="">
+                            </div>
+                            <div class="grid-cols-1 grid-rows-1 overflow-clip"><img class="w-full"
+                                                                                    src="../images/slide14.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-span-full py-16 text-2xl text-gray-300">
+                            <h5>by imenab</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="section3">
-            <div id="box7" class="" data-speed=".2"></div>
-            <div id="box8" data-scroll data-scroll-speed="1">
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget laoreet magna, eu ornare
-                    lorem. Integer id commodo nunc, at maximus neque. Aliquam eu orci ac mi ornare maximus. Vestibulum
-                    ultricies sollicitudin erat, sed interdum enim eleifend sed. Mauris consequat sapien nibh, et
-                    convallis lacus eleifend ac. Curabitur ipsum nunc, placerat et mattis ut, molestie non mauris. Ut
-                    ultricies est a justo fringilla, vel ultrices mi fringilla. Maecenas vel ultricies nisl, vel feugiat
-                    est. Etiam sit amet magna id ante mollis commodo quis a ipsum.</p>
-
-                <p>Sed congue nisi dolor, quis dapibus lacus pharetra nec. Proin metus odio, dapibus sit amet erat ac,
-                    semper rutrum ipsum. Sed in lacinia eros, non ultrices mi. Cras tempus ultricies malesuada. Quisque
-                    diam mi, ornare ac odio sit amet, fermentum sagittis nibh. Donec lectus orci, suscipit a lorem nec,
-                    mollis sagittis metus. Suspendisse vel tristique lorem. Aenean enim leo, consectetur in tristique
-                    quis, tincidunt sed ex.</p>
-
-                <p>Integer et tellus at enim faucibus facilisis id ut est. Nulla facilisi. Sed orci orci, interdum at
-                    sagittis at, vehicula vel purus. Vivamus ac ante tempus, laoreet nibh at, tempus massa. Fusce sit
-                    amet dui purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet velit eu
-                    libero tempor molestie.</p>
-
-                <p>Pellentesque consectetur, ligula et mollis posuere, diam ipsum maximus nisi, et fermentum elit erat
-                    id arcu. Donec non lobortis velit, eget accumsan dolor. Ut tristique dapibus mi. Donec suscipit,
-                    risus eu euismod mollis, ligula neque ultrices metus, ac fringilla est ligula sed lectus. Vivamus
-                    viverra a ante id tincidunt. Nam luctus lacus vel leo accumsan egestas. Etiam at pretium leo.
-                    Maecenas eu ultrices magna, sed pellentesque sapien. Phasellus ut purus eu massa hendrerit bibendum.
-                    Donec a eleifend urna. Curabitur pellentesque felis in mauris posuere, eget semper leo blandit.
-                    Donec maximus posuere commodo. Cras dictum erat erat. Pellentesque vulputate diam consequat nulla
-                    ultricies, in vehicula elit rhoncus. Donec ullamcorper, mauris at tristique elementum, erat lectus
-                    volutpat enim, non varius diam sem vitae erat. Duis at neque quis neque iaculis imperdiet nec quis
-                    leo.</p>
-            </div>
-        </section>
 
         <section id="section4">
             <div id="box9" class="" data-speed=".3"></div>

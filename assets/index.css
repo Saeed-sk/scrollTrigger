@@ -6,15 +6,30 @@
     background-size: 30%;
 }
 
-#scrollDiv {
-    scroll-behavior: smooth;
-}
 
 .content {
     -webkit-clip-path: url(#clipPath);
     clip-path: url(#clipPath);
 }
 
+#imageClip1 {
+    -webkit-clip-path: url(#bgImageClipPath1);
+    clip-path: url(#bgImageClipPath1);
+}
+
+#imageClip2 {
+    -webkit-clip-path: url(#bgImageClipPath2);
+    clip-path: url(#bgImageClipPath2);
+}
+
+#imageClip3 {
+    -webkit-clip-path: url(#bgImageClipPath3);
+    clip-path: url(#bgImageClipPath3);
+}
+
+.clipping {
+    clip-path: inset(0 100% 0 0);
+}
 
 body {
     margin: 0;
@@ -73,43 +88,6 @@ body {
     justify-content: center;
 }
 
-#box1 {
-    height: 100px;
-    width: 100px;
-    background: red;
-}
-
-#box2 {
-    height: 150px;
-    width: 150px;
-    background: blue;
-}
-
-#box3 {
-    height: 250px;
-    width: 250px;
-    background: green;
-    z-index: 1;
-}
-
-#box4 {
-    height: 200px;
-    width: 200px;
-    background: orange;
-}
-
-#box5 {
-    height: 200px;
-    width: 200px;
-    background: orange;
-}
-
-#box6 {
-    height: 200px;
-    width: 200px;
-    background: orange;
-}
-
 #box7 {
     height: 200px;
     width: 400px;
@@ -128,9 +106,10 @@ body {
 
 
 .imageHome5Bg {
-    background: url("/images/bg_first.png") top 40% right no-repeat, url("/images/home5Bg.png") bottom 20%  left 10% no-repeat;
+    background: url("/images/bg_first.png") top 40% right no-repeat, url("/images/home5Bg.png") bottom 20% left 10% no-repeat;
     background-size: 70%, 10%;
 }
-.boxAnimate.is-inview{
+
+.boxAnimate.is-inview {
     scale: 0 !important;
 }

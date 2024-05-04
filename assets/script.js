@@ -16,19 +16,8 @@ ScrollTrigger.scrollerProxy(".smooth-scroll", {
     }
 });
 let video = document.getElementById('firstVideo');
-let clipPaths = $('#clipPath').children()
-gsap.to(clipPaths, {
-    scrollTrigger: {
-        scroller: ".smooth-scroll",
-        scrub: true,
-        trigger: "#pin-box",
-        start: "100% 50%",
-        end: "+=2000",
-        toggleActions: "restart end reverse end",
-    },
-    stagger: -0.1,
-    width: 0,
-})
+
+
 locoScroll.on('scroll', (args) => {
     if (typeof args.currentElements['hey'] === 'object') {
         let progress = args.currentElements['hey'].progress;
@@ -52,7 +41,6 @@ for (let parallax of parallaxes) {
             trigger: $(".pin-box"),
             start: `${percent}% 100%`,
             end: "+=150%",
-            markers: true,
             toggleActions: "restart end reverse end",
         },
         translateX: "+=50"
@@ -87,12 +75,40 @@ gsap.to(".pin-wrap", {
     ease: "none"
 });
 let pinBoxW = pinBoxes.width()
+
+let clipPaths = $('#clipPath>rect');
+gsap.to(clipPaths, {
+    scrollTrigger: {
+        trigger: "#sectionPin",
+        scroller: ".smooth-scroll",
+        scrub: true,
+        start: (pinBoxW / 2) + 100,
+        end: "+=100%",
+        toggleActions: "restart end reverse end",
+    },
+    stagger: -0.1,
+    width: 0,
+})
+
+for (let circles of $(".boxLines>circle")) {
+    gsap.from(circles, {
+        scrollTrigger: {
+            trigger: "#sectionPin",
+            scroller: ".smooth-scroll",
+            start: (pinBoxW * 3) + (pinBoxW * 0.4),
+            end: "+=50%",
+            scrub: true
+        },
+        scale: 0,
+    })
+}
+
 gsap.from($(".boxLines>path"), {
     scrollTrigger: {
         trigger: "#sectionPin",
         scroller: ".smooth-scroll",
-        start: (pinBoxW * 3) + pinBoxW / 1.8,
-        end: pinBoxW * 4,
+        start: (pinBoxW * 3) + (pinBoxW * 0.4),
+        end: "+=50%",
         scrub: true
     },
     strokeDashoffset: 1000
@@ -102,58 +118,103 @@ for (let textLine of $(".boxLines>path.textLine")) {
         scrollTrigger: {
             trigger: "#sectionPin",
             scroller: ".smooth-scroll",
-            start: (pinBoxW * 3) + pinBoxW / 1.8,
-            end: pinBoxW * 4,
+            start: (pinBoxW * 3) + (pinBoxW * 0.4),
+            end: "+=50%",
             scrub: true
         },
         y: -100,
         opacity: 0,
     })
 }
-for (let circles of $(".boxLines>circle")) {
-    gsap.from(circles, {
-        scrollTrigger: {
-            trigger: "#sectionPin",
-            scroller: ".smooth-scroll",
-            start: (pinBoxW * 3) + pinBoxW / 2,
-            end: pinBoxW * 4,
-            scrub: true
-        },
-        scale: 0
-    })
-}
-
 let iconScale = gsap.timeline({
     scrollTrigger: {
         trigger: "#sectionPin",
         scroller: ".smooth-scroll",
-        start: (pinBoxW * 3) + pinBoxW / 1.8,
-        end: "+=180%",
+        start: (pinBoxW * 3) + (pinBoxW * 0.4),
+        end: "+=50%",
         scrub: true,
     }
 })
 iconScale.from($(".boxAnimate .iconSvg"), {
-    scale: 0
+    scale: 0,
+    duration: 1
 })
-iconScale.to($(".boxAnimate .iconSvg"), {
+
+let iconScale2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#sectionPin",
+        scroller: ".smooth-scroll",
+        start: (pinBoxW * 3) + (pinBoxW),
+        end: "+=150%",
+        scrub: true,
+    }
+})
+
+iconScale2.to($(".boxAnimate .iconSvg"), {
     scale: "+=6",
-    translateX: (pinBoxW / 2) + "px",
-    translateY: -(pinBoxes.height()/4) + "px"
+    translateX: (pinBoxW * 0.8) + "px",
+    translateY: -(pinBoxes.height() / 4) + "px",
+});
+let slidesAnimate = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#sectionPin",
+        scroller: ".smooth-scroll",
+        start: (pinBoxW * 4) + (pinBoxW * 0.5),
+        end: "+=280%",
+        scrub: true,
+    }
 })
 
-// gsap.to($(".boxAnimate .iconSvg"), {
-//     scrollTrigger: {
-//         trigger: "#sectionPin",
-//         scroller: ".smooth-scroll",
-//         start: (pinBoxW * 4)+10,
-//         end: (pinBoxW * 5)+ pinBoxW / 1.8,
-//         scrub: true,
-//     },
-//     scale:"+=110% +=110%",
-//     translateX:"+=10"
-// })
+slidesAnimate.from($(".pin-box .animated"), {
+    translateX: -pinBoxW * 0.7,
+    rotationY: 500,
+    stagger: -0.1,
+    opacity: 0,
+    ease: "circ.out"
+})
+////////////////////////////////////////////////////////////////
+let imagesAnimate = gsap.timeline({
+    scrollTrigger: {
+        scroller: ".smooth-scroll",
+        pin: ".imagesPin",
+        start: "0 0",
+        end: "+=500%",
+        scrub: true,
+        toggleActions: "restart end reverse end",
+    }
+})
+imagesAnimate.to($(".smallImage1"), {
+    scale: 1,
+    translateY: 0.5
+})
+
+imagesAnimate.from($("#bgImageClipPath2>rect"), {
+    transformOrigin: "100% 100%",
+    width: 0,
+    stagger: -0.09
+})
+
+imagesAnimate.to($(".smallImage2"), {
+    clipPath: "inset(0 0.01% 0 0)",
+}, "<1")
+
+imagesAnimate.to($(".smallImage1"), {
+    scale: 1.3,
+    translateY: 0.5
+},"<")
+
+imagesAnimate.from($("#bgImageClipPath3>rect"), {
+    transformOrigin: "100% 100%",
+    width: 0,
+    stagger: -0.09
+})
+
+imagesAnimate.to($(".smallImage3"), {
+    clipPath: "inset(0 0.01% 0 0)",
+}, "<1")
 
 
+//////////////////////////////////////////////////////////////
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());

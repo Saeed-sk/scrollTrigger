@@ -13,13 +13,13 @@
 }
 
 .horizontal-scroll-content {
-    flex-direction: row; /* تغییر جهت افقی */
-    scroll-snap-type: x mandatory; /* فعال‌سازی اسکرول snap */
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
 }
 .horizontal-scroll-item {
     flex: 0 0 auto;
-    width: 100vw; /* عرض کل صفحه */
-    scroll-snap-align: start; /* تنظیم snap align */
+    width: 100vw;
+    scroll-snap-align: start;
 }
 
 .imageHome3{
