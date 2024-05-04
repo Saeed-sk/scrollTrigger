@@ -618,6 +618,10 @@ video {
   height: 100svh;
 }
 
+.w-\[200vw\] {
+  width: 200vw;
+}
+
 .w-full {
   width: 100%;
 }

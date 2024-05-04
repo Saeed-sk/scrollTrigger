@@ -12,12 +12,11 @@
 
 .content {
     -webkit-clip-path: url(#clipPath);
-    clip-path: url(#clipPath); /* مسیر مخفی کننده اعمال شده */
+    clip-path: url(#clipPath);
 }
 
 
 body {
-    background: red;
     margin: 0;
 }
 
@@ -60,17 +59,18 @@ body {
     height: 100%;
     width: 100vw;
 }
-
+.pin-box {
+    height: 100%;
+    width: 100vw;
+}
 
 #section3 {
-    background: orange;
     padding: 5%;
     display: flex;
     justify-content: space-around;
 }
 
 #section4 {
-    background: grey;
     padding: 10%;
     height: 100vh;
     display: flex;
@@ -134,4 +134,7 @@ body {
 .imageHome5Bg {
     background: url("/images/bg_first.png") top 40% right no-repeat, url("/images/home5Bg.png") bottom 20%  left 10% no-repeat;
     background-size: 70%, 10%;
+}
+.boxAnimate.is-inview{
+    scale: 0 !important;
 }

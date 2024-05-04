@@ -122,6 +122,32 @@ for (let circles of $(".boxLines>circle")) {
         scale: 0
     })
 }
+gsap.from($(".boxAnimate .iconSvg"), {
+    scrollTrigger: {
+        trigger: "#sectionPin",
+        scroller: ".smooth-scroll",
+        start: (pinBoxW * 3) + pinBoxW / 1.8,
+        end: pinBoxW * 4,
+        scrub: true,
+    },
+    scale:0
+})
+
+let animateLine = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#sectionPin",
+        scroller: ".smooth-scroll",
+        start: (pinBoxW * 4),
+        end: pinBoxW * 5,
+        scrub: true,
+        onLeave:()=>{
+            locoScroll.on('scroll', (e)=>{
+                console.log(e)
+            })
+        }
+}})
+console.log($("#sectionPin"))
+
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
